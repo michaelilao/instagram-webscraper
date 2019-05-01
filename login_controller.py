@@ -1,5 +1,4 @@
 import requests
-import instagramscraper
 from selenium import webdriver
 import re
 import pdb
@@ -13,7 +12,6 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.chrome.options import Options
 import os
 
-path = "/mnt/c/SE/Github/instagram-webscraper/chromedriver.exe"
 
 def likes_parser(data):
     data = re.search("\n(.*) others", data, flags=0)
@@ -90,6 +88,3 @@ def privateuser(username,password,url,path_to_driver,headless):
     profile.set_posts(postlist)
     driver.close()
     profile.view_all()
-
-privateuser("mikeyilao","Chantelle16","mikeyilao",path,False)
-#unblockeduser("https://www.instagram.com/mattyilao/")
